@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Your Room - Student Housing Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+
+
+</head>
+<body>
+    <header>
+   
+        <a class="logo animate__animated animate__fadeIn" href="Index.html" >R.com</a>
+        
+    <input  class="homepage-search-input" placeholder="Search area, city, college" name="text" type="text" />
+
+    
+    <div class="nav-icons">
+         <button id="hb1"><a href="#" >Saved Rooms</a></button>
+        <button id="hb1"> <a href="#" >Account</a></button>
+        <button id="hb1"> <a href="List_Room_Page.html" >List your Room</a></button>
+    </div>
+</header>
+    <div class="listing-container">
+        <h1>List Your Room</h1>
+        <form class="room-listing-form">
+            
+            <div class="room-form-section">
+                <h2>Basic Information</h2>
+                <div class="room-form-group">
+                    <label for="room-title">Listing Title</label>
+                    <input type="text" id="room-title" required placeholder="e.g., Room near New College">
+                </div>
+                <div class="room-form-group">
+                    <label for="room-price">Monthly Rent (₹)</label>
+                    <input type="number" id="room-price" required placeholder="e.g., 5000">
+                </div>
+                <div class="room-form-group">
+                    <label for="room-beds">Number of Beds</label>
+                    <input type="number" id="room-beds" required min="1">
+                </div>
+            </div>
+
+            
+            <div class="room-form-section">
+                <h2>Location</h2>
+                <div class="room-form-group">
+                    <label for="room-address">Complete Address</label>
+                    <textarea id="room-address" required placeholder="Enter full address"></textarea>
+                </div>
+                <div class="room-form-group">
+                    <label for="room-landmark">Nearest Landmark</label>
+                    <input type="text" id="room-landmark" placeholder="e.g., XYZ College, Metro Station">
+                </div>
+            </div>
+
+            
+            <div class="room-form-section">
+                <h2>Amenities</h2>
+                <div class="room-checkbox-group">
+                    <label><input type="checkbox" name="room-amenities" value="wifi"> WiFi</label>
+                    <label><input type="checkbox" name="room-amenities" value="ac"> Fan</label>
+                    <label><input type="checkbox" name="room-amenities" value="furnished"> Table chair</label>
+                    <label><input type="checkbox" name="room-amenities" value="kitchen"> Cooking facility</label>
+                    <label><input type="checkbox" name="room-amenities" value="laundry"> Saparet bathroom</label>
+                    <label><input type="checkbox" name="room-amenities" value="parking"> Parking</label>
+                </div>
+            </div>
+
+            
+            <div class="room-form-section">
+                <h2>Room Images</h2>
+                <div class="room-form-group">
+                    <label for="room-images">Upload Images</label>
+                    <input type="file" id="room-images" multiple accept="image/*" required>
+                </div>
+            </div>
+
+        
+            <div class="room-form-section">
+                <h2>Description</h2>
+                <div class="room-form-group">
+                    <label for="room-description">Room Description</label>
+                    <textarea id="room-description" required placeholder="Describe your room, rules, and preferences"></textarea>
+                </div>
+            </div>
+
+    
+            <div class="room-form-section">
+                <h2>Contact Information</h2>
+                <div class="room-form-group">
+                    <label for="room-phone">Phone Number</label>
+                    <input type="tel" id="room-phone" required pattern="[0-9]{10}">
+                </div>
+                <div class="room-form-group">
+                    <label for="room-email">Email</label>
+                    <input type="email" id="room-email" required>
+                </div>
+            </div>
+
+            <button type="submit" class="room-submit-btn">List Your Room</button>
+        </form>
+    </div>
+</body>
+</html> 

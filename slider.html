@@ -1,0 +1,94 @@
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="images/room-1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Slide 3">
+        </div>
+    </div>
+    
+    <button class="slider-button prev">❮</button>
+    <button class="slider-button next">❯</button>
+</div>
+
+<style>
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.slider-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+</style>
+
+<script>
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentSlide = 0;
+const slideCount = slides.length;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideCount;
+    updateSlider();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+    updateSlider();
+}
+
+// Add click event listeners to buttons
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+// Auto-advance slides every 5 seconds
+setInterval(nextSlide, 5000);
+</script>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2efff;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+        header .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+        header .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-gallery {
+            width: 40%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(46, 46, 46, 0.1);
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .image-gallery .thumbnails {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .image-gallery .thumbnails img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .image-gallery .thumbnails img:hover {
+            border-color: #004080;
+        }
+        .room-info {
+            width: 40%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .room-info h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .room-info .price {
+            color: #d32f2f;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .room-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .room-info ul li {
+            margin-bottom: 10px;
+        }
+        .room-info .description {
+            margin-top: 20px;
+        }
+        .action-box {
+            width: 20%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .action-box button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .action-box button:hover {
+            background-color: #003366;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        .view3d-button {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .btn-3d {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-3d:hover {
+            background-color: #003366;
+        }
+        @media screen and (max-width: 768px) {@media screen and (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .image-gallery, .room-info, .action-box {
+                width: 100%;
+            }
+        }   }
+    </style>
+</head>
+<body>
+
+    <header>
+   
+        <a class="logo animate__animated animate__fadeIn" href="Index.html" >R.com</a>
+        
+    <input  class="homepage-search-input" placeholder="Search area, city, college" name="text" type="text" />
+
+    
+    <div class="nav-icons">
+         <button id="hb1"><a href="#" >Saved Rooms</a></button>
+        <button id="hb1"> <a href="#" >Account</a></button>
+        <button id="hb1"> <a href="List_Room_Page.html" >List your Room</a></button>
+    </div>
+</header>
+
+<div class="content">
+    <div class="image-gallery animate__animated animate__fadeIn">
+        <img id="mainImage" src="./images/room-1.jpg" alt="Main Room Image">
+        <div class="thumbnails">
+            <img id="img1" src="./images/room-1.jpg" alt="Thumbnail 1">
+            <img id="img2" src="./images/room-2.jpg" alt="Thumbnail 2">
+            <img id="img3" src="./images/room-3.jpg" alt="Thumbnail 3">
+            <img id="img4" src="./images/room-4.jpg" alt="Thumbnail 4">
+        </div>
+        <div class="view3d-button">
+            <a href="room_3d_view.html" class="btn-3d">View in 3D</a>
+        </div>
+    </div>
+
+    <div class="room-info animate__animated animate__fadeIn">
+        <h1>Shared Room near New College</h1>
+        <div class="Rent">₹1,250/month</div>
+        <ul>
+            <li><strong>Location:</strong> 500m from new college</li>
+            <li><strong>Area:</strong> 2500 sq. ft.</li>
+            <li><strong>Security Deposit:</strong> No Deposit</li>
+            <li><strong>Room Type:</strong> Shared</li>
+            <li><strong>Amenities:</strong> Fan,ac, Laundry</li>
+        </ul>
+        <div class="description animate__animated animate__fadeIn">
+            <p>The room is for college students ,Rent of room is fixed ,light and water bill is included in the rent </p>
+        </div>
+    </div>
+
+
+    <div class="action-box animate__animated animate__fadeIn">
+        <button>Contact Now</button>
+        <button>Navigate to Room</button>
+    </div>
+</div>
+<script >
+   document.getElementById('img1').addEventListener('click', () => {
+    console.log('clicked');
+    document.querySelectorAll('.image-gallery img').src = 'images/room-1.jpg'; });
+
+
+    document.getElementById('img2').addEventListener('click', () => {
+        document.querySelector('.image-gallery img').src = 'images/room-2.jpg'; });
+        document.getElementById('img3').addEventListener('click', function() {
+  document.querySelector('.image-gallery img').src = 'images/room-3.jpg'; });
+            document.getElementById('img4').addEventListener('click', function() {
+      document.querySelector('.image-gallery img').src = 'images/room-4.jpg'; });
+</script>
+
+
+
+</body>
+</html>
